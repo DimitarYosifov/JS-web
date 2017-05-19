@@ -1,0 +1,14 @@
+{
+  "name": "storage",
+  "version": "0.0.1",
+  "description": "homework",
+  "main": "oi.js",
+  "scripts": {
+    "test": "\t"
+  },
+  "keywords": [
+    "no"
+  ],
+  "author": "mitko",
+  "license": "MIT"
+}
