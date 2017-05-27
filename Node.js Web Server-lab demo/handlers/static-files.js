@@ -11,7 +11,6 @@ let getContentType = (url) => {
     else if (url.endsWith('.html')) {
         contentType = 'text/html'
     }
-
     return contentType
 }
 
@@ -26,26 +25,22 @@ function validate(path) {
 }
 
 module.exports = (req, res) => {
-    //  console.log(req.path)
     fs.readFile('.' + req.path, (err, data) => {
         if (err
             //|| !req.path.startsWith('/content')
             // ||!req.method === 'GET'
-           
         ) {
-             console.log(err)
+            console.log(err)
             res.writeHead(404)
             res.write('404 page not found')
             res.end()
             return
         }
 
-
         res.writeHead(200, {
             'Content-Type': getContentType(req.path)
         })
         res.write(data)
         res.end()
-
     })
 }

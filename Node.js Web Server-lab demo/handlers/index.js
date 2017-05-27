@@ -7,14 +7,11 @@ const viewAllImages = require('./display')
 const singleImage = require('./single-image')
 
 module.exports = [
-
     homePageHandler,
     faviconHandler,
     mitkoPageHandler,
     uploadImage,
     viewAllImages,
     singleImage,
-
     staticFilesHandler
-
 ]

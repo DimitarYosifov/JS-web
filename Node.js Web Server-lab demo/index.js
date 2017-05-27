@@ -7,7 +7,6 @@ const queryString = require('querystring')
 http
     .createServer((req, res) => {
         req.path = url.parse(req.url).pathname
-        //req.path = url.parse(req.url).pathname    
 
         for (let handler of handlers) {
             let next = handler(req, res)
@@ -15,7 +14,6 @@ http
                 break
             }
         }
-        
     })
     .listen(port)
 

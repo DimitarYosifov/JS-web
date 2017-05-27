@@ -1,10 +1,8 @@
 const fs = require('fs')
 
-
 module.exports = (req, res) => {
-     
+
     if (req.path === '/mitko') {
-    
         fs.readFile('./mitko.html', (err, data) => {
             if (err) {
                 console.log(err)
@@ -14,7 +12,7 @@ module.exports = (req, res) => {
                 'Content-Type': 'text/html'
             })
             res.write(data)
-            res.end()   
+            res.end()
         })
     }
     else {

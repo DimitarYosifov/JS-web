@@ -4,5 +4,9 @@
   "description": "",
   "main": "index.js",
   "author": "mitko",
-  "license": "MIT"
+  "license": "MIT",
+  "engine": "6.6.0",
+  "scripts": {
+    "start": "node index.js"
+  }
 }
