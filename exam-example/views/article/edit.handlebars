@@ -1,0 +1,10 @@
+<h1>edit working</h1>
+{{#each extracted}}
+<form action="/articles/edit/{{this.type}}" method="POST">
+    article:
+    <input type="text" name="newType" placeholder={{this.type}} required/> 
+     <br>
+    <input type="submit" value="edit article" />
+</form>
+
+{{/each}}

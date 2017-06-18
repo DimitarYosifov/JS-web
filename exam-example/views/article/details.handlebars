@@ -1,0 +1,41 @@
+ <link href="/css/site.css" type="text/css" rel="stylesheet" />
+
+{{#each extracted}}
+<h2>Article: {{this.type}}</h2>
+<br>
+<h2>Description: {{this.description}} </h2>
+<br>
+<img src="{{this.image}}">
+<br>    
+<h2>Category: {{this.category}}</h2>
+<p>Total views: {{this.views}}</p>
+
+{{/each}}
+
+{{#if isLiked}}
+<button class="like-class"><a href="/articles/dislike/{{this.article}}">Dislike this!</a></button>
+{{else}}
+<button class="like-class"><a href="/articles/like/{{this.article}}">Like this!</a></button>
+{{/if}}
+
+
+{{#if currentUser}}
+<br><br>
+
+<form action="/answers/add/{{this.article}}" method="POST">
+    add comment:
+    <input type="text" name="text"  required/> 
+     <br>
+    <input type="submit" value="comment" />
+</form>
+{{/if}}
+
+<br><br>
+
+<ul>
+{{#each answers}}
+<li>{{this.text}}</li>
+<br>
+{{/each}}
+</ul>
+

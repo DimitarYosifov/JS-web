@@ -1,0 +1,31 @@
+ <link href="/css/site.css" type="text/css" rel="stylesheet" />
+
+<h1>works</h1>
+{{#each articles}}
+<li>{{this.type}}
+<button><a href="/articles/details/{{this.id}}">details</a></button>
+{{#if this.toBeEdited}}
+<button><a href="/articles/edit/{{this.id}}">edit</a></button>
+{{/if}}
+<span>Total views:{{this.views}}</span>
+<span>Total likes:{{this.likes}}</span>
+</li>
+<img src="{{this.image}}" alt="photo missing">
+<br>
+
+{{/each}} 
+<br>
+<br>
+
+<span>Jump to page   </span>
+{{#each numberOfPages}}
+<span><button><a href="/articles/list/page/{{this.page}}">{{this.page}}</a></button></span>
+{{/each}} 
+
+
+
+
+
+
+
+

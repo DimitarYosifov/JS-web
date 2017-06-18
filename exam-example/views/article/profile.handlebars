@@ -1,0 +1,11 @@
+My posts:
+{{#each myPosts}}
+<li><a href="/articles/details/{{this._id}}">{{this.type}}</a></li>
+<br>
+{{/each}}
+<br>
+My answers:
+{{#each myAnswers}}
+<li><a href="/articles/details/{{this.article}}">{{this.text}}</a></li>
+<br>
+{{/each}}
